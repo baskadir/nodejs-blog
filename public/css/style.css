@@ -228,45 +228,74 @@ img {
 }
 
 .article-ul li {
-    font-size: 24px;
-    cursor: pointer;
-    transition: filter 0.1s;
+  font-size: 24px;
+  cursor: pointer;
+  transition: filter 0.1s;
 }
 
 .article-ul li:not(:last-child) {
-    border-bottom: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
 }
 
 .article-ul li:hover {
-    filter: none;
+  filter: none;
 }
 
 .article-ul:hover li {
-    filter: blur(3px);
+  filter: blur(3px);
 }
 
 .article-ul:hover li:hover {
-    filter: none;
+  filter: none;
 }
 
 .pagination {
-    font-size: 1.3rem;
-    color: var(--gray);
-    text-decoration: none;
-    margin-top: 40px;
-    display: inline-block;
+  font-size: 1.3rem;
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 40px;
+  display: inline-block;
 }
 
 .pagination:hover {
-    color: var(--black);
+  color: var(--black);
 }
 
 .article {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 /* Footer */
 .footer {
-    margin: 4rem;
-    text-align: center;
+  margin: 4rem;
+  text-align: center;
+}
+
+/* SeachBar */
+.searchBar {
+  visibility: hidden;
+  transform: translateY(-100px);
+  background-color: var(--black);
+  padding: 4px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.searchBar.open {
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+.searchBar input {
+  margin: 0;
+  border: 0;
+}
+
+#searchClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--gray-light);
+  padding: 15px;
 }
